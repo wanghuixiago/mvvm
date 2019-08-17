@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <!-- 双向数据绑定 -->
+        <input type="text" v-model="message">
+        {{message}}
+    </div>
+    <script src="node_modules/vue/dist/vue.js"></script>
+    <script>
+        //Object.defineProperty get /set
+        //vue中实现双向绑定，1、模板的编译2、数据劫持 3、Watcher
+        let vm = new Vue({
+            el:'#app',//document.getElementById("app")
+            data:{
+                message:'hello zfpx'
+            }
+        })
+    </script>
+</body>
+</html>
